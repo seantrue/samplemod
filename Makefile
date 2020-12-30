@@ -1,3 +1,5 @@
+SITE_PACKAGES=${VIRTUAL_ENV}/lib/python3.7/site_packages
+
 init:
 	pip install -r requirements.txt
 
@@ -12,3 +14,10 @@ presetup:  README.rst
 build: presetup
 	python setup.py build
 
+sphinx: docs
+	cd docs; make html
+
+# Build a requirements.txt that only has top level requirments present
+.PHONY: requirements
+requirements:
+	(pipdeptree|grep -v "^\ " >requirements.txt)

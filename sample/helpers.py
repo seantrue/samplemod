@@ -1,3 +1,3 @@
-def get_answer():
+def get_answer() -> bool:
     """Get an answer."""
     return True
