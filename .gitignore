@@ -53,13 +53,6 @@ coverage.xml
 *.log
 local_settings.py
 
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
 # Sphinx documentation
 docs/_build/
 
@@ -69,22 +62,9 @@ target/
 # IPython Notebook
 .ipynb_checkpoints
 
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
 # dotenv
 .env
 
-# virtualenv
-.venv/
-venv/
-ENV/
-
-# Spyder project settings
-.spyderproject
-
-# Rope project settings
-.ropeproject
+# Don't check in things that may have secrets
+credentials.yml
+credentials.yaml
